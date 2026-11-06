@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1b2a">
+  <title>R.M.D Travels — Where Every Journey Feels Secure</title>
+  <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+  <!-- Fonts: Cormorant Garamond (headings) + Montserrat (body), as in the first version -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap">
+  <!-- Remix Icon set (open-source, Apache-2.0) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header>
+    <div class="header-bar">
+      <a href="index.html" class="brand-logo"><img src="pictures/logo.png" alt="RMD Travels Logo"></a>
+      <div class="header-brand">
+        <h2>R.M.D <span>Travels</span></h2>
+        <h3>Where Every Journey Feels Secure</h3>
+      </div>
+
+      <!-- Desktop Nav (pushed to the right) -->
+      <nav class="desktop-nav" aria-label="Main">
+        <a href="#welcome">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why">About Us</a>
+        <a href="#connections">Routes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <div id="hamburger" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" aria-hidden="true">
+      <a href="#welcome">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">About Us</a>
+      <a href="#connections">Routes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero">
+    <div class="hero-media">
+      <img class="hero-img" src="pictures/background.png" alt="RMD Travels — highway landscape">
+    </div>
+
+    <div class="hero-content hero-box" id="welcome">
+      <h1>Welcome to <span>RMD</span> Tour &amp; Travels</h1>
+      <div class="hero-divider"></div>
+      <h2>Reliable, Comfortable &amp; Affordable Travel Across India</h2>
+      <p class="hero-sub">Bus rental services and tour packages for families, groups, companies, schools, and pilgrims.</p>
+      <div class="hero-cta">
+        <button class="btn-primary button" onclick="document.querySelector('.ticket-section').scrollIntoView({behavior:'smooth'})">Search for a Bus</button>
+        <button class="btn-outline button button--outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Our Services</button>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════ BOOKING BAR ═══════════ -->
+  <div class="ticket-section" id="booking">
+    <h1>FIND A <span>BUS</span></h1>
+    <p class="booking-sub">Select your origin, destination and travel date</p>
+
+    <div class="search-box" id="searchBox">
+
+      <!-- Origin dropdown -->
+      <div class="stop-select-wrap">
+        <i class="ri-map-pin-2-line field-ico" aria-hidden="true"></i>
+        <label for="originSelect" class="sr-only">Origin</label>
+        <select id="originSelect" class="stop-select" aria-label="Origin stop">
+          <option value="" disabled selected>From — Select Stop</option>
+        </select>
+      </div>
+
+      <!-- Swap button -->
+      <button class="swap-btn" id="swapBtn" title="Swap origin and destination" aria-label="Swap cities"><i class="ri-arrow-left-right-line" aria-hidden="true"></i></button>
+
+      <!-- Destination dropdown -->
+      <div class="stop-select-wrap">
+        <i class="ri-flag-line field-ico" aria-hidden="true"></i>
+        <label for="destSelect" class="sr-only">Destination</label>
+        <select id="destSelect" class="stop-select" aria-label="Destination stop">
+          <option value="" disabled selected>To — Select Stop</option>
+        </select>
+      </div>
+
+      <!-- Date picker -->
+      <div class="date-wrap">
+        <i class="ri-calendar-line field-ico" aria-hidden="true"></i>
+        <input type="date" id="journeyDate" aria-label="Journey Date" class="date-input">
+      </div>
+
+      <!-- Search button -->
+      <button class="search-btn button" id="searchBtn"><i class="ri-search-line" aria-hidden="true"></i> SEARCH BUSES</button>
+    </div>
+
+    <!-- Results panel — hidden until search -->
+    <div id="busResults" class="bus-results" aria-live="polite" hidden></div>
+  </div>
+
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section id="services">
+    <div class="section">
+      <div class="services-header reveal">
+        <p class="section-label eyebrow">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">From pilgrimages to corporate trips, we have a fleet and a package tailored for every journey.</p>
+      </div>
+
+      <ul class="services-grid">
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-hearts-line" aria-hidden="true"></i></div><h3>Marriage &amp; Wedding Bus Booking</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-ancient-pavilion-line" aria-hidden="true"></i></div><h3>Chardham Yatra Packages</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-24-hours-line" aria-hidden="true"></i></div><h3>24×7 Support</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-map-2-line" aria-hidden="true"></i></div><h3>All India Tour Packages</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-bus-2-line" aria-hidden="true"></i></div><h3>Tourist Bus Rental</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-building-2-line" aria-hidden="true"></i></div><h3>Corporate Staff Transportation</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-school-line" aria-hidden="true"></i></div><h3>School &amp; College Trips</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-ancient-gate-line" aria-hidden="true"></i></div><h3>Pilgrimage Tours</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-plant-line" aria-hidden="true"></i></div><h3>Family Picnic Tours</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-flight-takeoff-line" aria-hidden="true"></i></div><h3>Airport &amp; Railway Pickup / Drop</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-vip-crown-line" aria-hidden="true"></i></div><h3>Luxury Sleeper &amp; AC Bus Services</h3></li>
+        <li class="service-card card reveal"><div class="service-icon"><i class="ri-fire-line" aria-hidden="true"></i></div><h3>Fire Safety, Extinguisher &amp; Emergency Exit</h3></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ STATS RIBBON ═══════════ -->
+  <div class="stats-ribbon">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num" data-start="2783" data-target="3520" data-suffix="+">2783+</div>
+        <div class="stat-label">Passengers Daily</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-start="41" data-target="75" data-suffix="+">41+</div>
+        <div class="stat-label">Trained Staff</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-start="7" data-target="14" data-suffix="+">7+</div>
+        <div class="stat-label">Routes Covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-start="3" data-target="10" data-suffix="+">3+</div>
+        <div class="stat-label">Bus Types Available</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════ WHY CHOOSE US ═══════════ -->
+  <section id="why" class="band">
+    <div class="section">
+      <div class="reveal">
+        <p class="section-label eyebrow">Why RMD</p>
+        <h2 class="section-title">Why Choose Us</h2>
+        <p class="section-sub">We are not just a bus service — we are your travel partner for life.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card card reveal">
+          <div class="why-num">01</div>
+          <h2>Comfort on Board</h2>
+          <p>Our modern buses are equipped with comfortable, clean interiors designed for long and short journeys alike.</p>
+        </div>
+        <div class="why-card card reveal">
+          <div class="why-num">02</div>
+          <h2>Safety First</h2>
+          <p>24×7 customer support along with safe, on-time journeys — your wellbeing is our highest priority.</p>
+        </div>
+        <div class="why-card card reveal">
+          <div class="why-num">03</div>
+          <h2>Travel Made Easy</h2>
+          <p>Affordable pricing with an All India Permit service so you can travel seamlessly across state borders.</p>
+        </div>
+        <div class="why-card card reveal">
+          <div class="why-num">04</div>
+          <h2>Experienced Drivers &amp; Staff</h2>
+          <p>75+ well-trained professionals dedicated to ensuring every trip is smooth, safe, and enjoyable.</p>
+        </div>
+        <div class="why-card card reveal">
+          <div class="why-num">05</div>
+          <h2>Trusted by Thousands</h2>
+          <p>3,520+ passengers travel with us every day — a testament to the trust the community places in RMD.</p>
+        </div>
+        <div class="why-card card reveal">
+          <div class="why-num">06</div>
+          <h2>Variety of Buses</h2>
+          <p>AC, Non-AC, Deluxe, Volvo, Sleeper, and Semi-Sleeper — pick the ride that matches your comfort level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ CONNECTIONS ═══════════ -->
+  <section id="connections">
+    <div class="section">
+      <div class="reveal">
+        <p class="section-label eyebrow">Our Network</p>
+        <h2 class="section-title">Connections</h2>
+        <p class="section-sub">We connect communities across Muzaffarpur and surrounding regions every single day.</p>
+      </div>
+
+      <!-- Route map -->
+      <div class="route-map-box reveal">
+        <img class="zoomable" src="pictures/Map.png" alt="NH Route Map Muzaffarpur to Samastipur">
+      </div>
+
+      <!-- Stop pills -->
+      <ul class="connections-grid">
+        <li class="city-pill reveal">Muzaffarpur</li>
+        <li class="city-pill reveal">Bhagwanpur</li>
+        <li class="city-pill reveal">Gobarsahi</li>
+        <li class="city-pill reveal">Kacchi Pakki</li>
+        <li class="city-pill reveal">Dighra</li>
+        <li class="city-pill reveal">Kaji Inda</li>
+        <li class="city-pill reveal">Maniyari</li>
+        <li class="city-pill reveal">Markan</li>
+        <li class="city-pill reveal">Siho</li>
+        <li class="city-pill reveal">Sabha</li>
+        <li class="city-pill reveal">Sujawalpur</li>
+        <li class="city-pill reveal">Tajpur</li>
+        <li class="city-pill reveal">Musri Gharari</li>
+        <li class="city-pill reveal">Samastipur</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ GALLERY ═══════════ -->
+  <div id="main-gallery" class="gallery-container band">
+    <h2 class="gallery-title">Gallery</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-section"><img src="pictures/p1.jpeg" alt="RMD Travels fleet" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p2.jpeg" alt="RMD Travels journey" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p3.png"  alt="RMD Travels bus interior" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p4.png"  alt="RMD Travels route" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p5.png"  alt="RMD Travels passengers" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p6.png"  alt="RMD Travels service" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p7.png"  alt="RMD Travels bus" class="gallery-img zoomable"></div>
+      <div class="gallery-section"><img src="pictures/p8.png"  alt="RMD Travels team" class="gallery-img zoomable"></div>
+      <!-- <div class="gallery-section"><img src="pictures/p9.png.jpg"  alt="RMD Travels team" class="gallery-img zoomable"></div> -->
+    </div>
+  </div>
+
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="contact">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="pictures/logo.png" alt="RMD Travels Logo">
+        <h2>R.M.D Travels</h2>
+        <h3>Where Every Journey Feels Secure</h3>
+        <p>Serving Bihar and beyond with reliable, comfortable, and affordable bus services since inception.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Registered Office</h4>
+        <p>House No-160, Sabha Chowk,<br>Dholi, Sakra,<br>Muzaffarpur, Bihar — 843105</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+919934607926">+91 99346 07926</a>
+        <a href="mailto:travelsupport@rmd.in">travelsupport@rmd.in</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <!-- Replace the href values with your real profile links -->
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+          <a href="https://facebook.com/"  target="_blank" rel="noopener" aria-label="Facebook"  title="Facebook"><i class="ri-facebook-circle-line" aria-hidden="true"></i></a>
+          <a href="https://youtube.com/"   target="_blank" rel="noopener" aria-label="YouTube"   title="YouTube"><i class="ri-youtube-line" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 R.M.D Travels. All rights reserved.</p>
+      <p>Designed with care for every traveller.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

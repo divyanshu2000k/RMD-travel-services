@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "route": "Muzaffarpur ↔ Samastipur",
+    "totalBuses": 5,
+    "tripsPerBusPerDay": 6,
+    "serviceDays": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "firstDeparture": "04:50",
+    "lastArrival": "21:00",
+    "busIntervalMinutes": 15,
+    "note": "Each subsequent bus runs 15 minutes behind the previous one"
+  },
+
+  "stops": [
+    "Samastipur",
+    "Musri Gharari",
+    "Tajpur",
+    "Sujaval Pur",
+    "Sabha",
+    "Siho",
+    "Markan",
+    "Maniyari",
+    "Kaji Inda",
+    "Dighra",
+    "Kacchi Pakki",
+    "Gobarsahi",
+    "Bhagwanpur",
+    "Muzaffarpur"
+  ],
+
+  "buses": [
+    { "id": "BUS-01", "seats": 40 },
+    { "id": "BUS-02", "seats": 40 },
+    { "id": "BUS-03", "seats": 40 },
+    { "id": "BUS-04", "seats": 40 },
+    { "id": "BUS-05", "seats": 40 }
+  ],
+
+  "baseTimetable": {
+    "note": "Base schedule for BUS-01. Each next bus is shifted +15 minutes on every time below.",
+    "trips": [
+      {
+        "tripNo": 1,
+        "direction": "Samastipur→Muzaffarpur",
+        "stops": [
+          { "stop": "Samastipur",   "arrive": null,    "depart": "04:50" },
+          { "stop": "Musri Gharari","arrive": "05:10",  "depart": "05:15" },
+          { "stop": "Tajpur",       "arrive": "05:36",  "depart": "05:38" },
+          { "stop": "Sujaval Pur",  "arrive": "06:05",  "depart": "06:07" },
+          { "stop": "Sabha",        "arrive": "06:10",  "depart": "06:12" },
+          { "stop": "Siho",         "arrive": "06:20",  "depart": "06:22" },
+          { "stop": "Markan",       "arrive": "06:27",  "depart": "06:29" },
+          { "stop": "Maniyari",     "arrive": "06:37",  "depart": "06:38" },
+          { "stop": "Kaji Inda",    "arrive": "06:46",  "depart": "06:47" },
+          { "stop": "Dighra",       "arrive": "06:53",  "depart": "06:53" },
+          { "stop": "Kacchi Pakki", "arrive": "06:58",  "depart": "06:58" },
+          { "stop": "Gobarsahi",    "arrive": "07:03",  "depart": "07:03" },
+          { "stop": "Bhagwanpur",   "arrive": "07:06",  "depart": "07:06" },
+          { "stop": "Muzaffarpur",  "arrive": "07:10",  "depart": null    }
+        ]
+      },
+      {
+        "tripNo": 2,
+        "direction": "Muzaffarpur→Samastipur",
+        "stops": [
+          { "stop": "Muzaffarpur",  "arrive": "07:10",  "depart": "07:20" },
+          { "stop": "Bhagwanpur",   "arrive": "07:22",  "depart": "07:23" },
+          { "stop": "Gobarsahi",    "arrive": "07:26",  "depart": "07:27" },
+          { "stop": "Kacchi Pakki", "arrive": "07:30",  "depart": "07:30" },
+          { "stop": "Dighra",       "arrive": "07:36",  "depart": "07:36" },
+          { "stop": "Kaji Inda",    "arrive": "07:42",  "depart": "07:42" },
+          { "stop": "Maniyari",     "arrive": "07:50",  "depart": "07:50" },
+          { "stop": "Markan",       "arrive": "07:53",  "depart": "07:53" },
+          { "stop": "Siho",         "arrive": "07:58",  "depart": "07:58" },
+          { "stop": "Sabha",        "arrive": "08:05",  "depart": "08:05" },
+          { "stop": "Sujaval Pur",  "arrive": "08:08",  "depart": "08:08" },
+          { "stop": "Tajpur",       "arrive": "08:22",  "depart": "08:22" },
+          { "stop": "Musri Gharari","arrive": "08:35",  "depart": "08:35" },
+          { "stop": "Samastipur",   "arrive": "09:30",  "depart": null    }
+        ]
+      },
+      {
+        "tripNo": 3,
+        "direction": "Samastipur→Muzaffarpur",
+        "stops": [
+          { "stop": "Samastipur",   "arrive": null,     "depart": "10:15" },
+          { "stop": "Musri Gharari","arrive": "10:35",  "depart": "10:38" },
+          { "stop": "Tajpur",       "arrive": "10:56",  "depart": "10:58" },
+          { "stop": "Sujaval Pur",  "arrive": "11:25",  "depart": "11:27" },
+          { "stop": "Sabha",        "arrive": "11:30",  "depart": "11:32" },
+          { "stop": "Siho",         "arrive": "11:40",  "depart": "11:42" },
+          { "stop": "Markan",       "arrive": "11:47",  "depart": "11:49" },
+          { "stop": "Maniyari",     "arrive": "11:57",  "depart": "11:58" },
+          { "stop": "Kaji Inda",    "arrive": "12:06",  "depart": "12:07" },
+          { "stop": "Dighra",       "arrive": "12:13",  "depart": "12:13" },
+          { "stop": "Kacchi Pakki", "arrive": "12:18",  "depart": "12:18" },
+          { "stop": "Gobarsahi",    "arrive": "12:23",  "depart": "12:23" },
+          { "stop": "Bhagwanpur",   "arrive": "12:26",  "depart": "12:26" },
+          { "stop": "Muzaffarpur",  "arrive": "13:00",  "depart": null    }
+        ]
+      },
+      {
+        "tripNo": 4,
+        "direction": "Muzaffarpur→Samastipur",
+        "stops": [
+          { "stop": "Muzaffarpur",  "arrive": "13:00",  "depart": "13:13" },
+          { "stop": "Bhagwanpur",   "arrive": "13:20",  "depart": "13:22" },
+          { "stop": "Gobarsahi",    "arrive": "13:25",  "depart": "13:26" },
+          { "stop": "Kacchi Pakki", "arrive": "13:29",  "depart": "13:29" },
+          { "stop": "Dighra",       "arrive": "13:35",  "depart": "13:35" },
+          { "stop": "Kaji Inda",    "arrive": "13:41",  "depart": "13:41" },
+          { "stop": "Maniyari",     "arrive": "13:49",  "depart": "13:49" },
+          { "stop": "Markan",       "arrive": "13:52",  "depart": "13:52" },
+          { "stop": "Siho",         "arrive": "13:57",  "depart": "13:57" },
+          { "stop": "Sabha",        "arrive": "14:04",  "depart": "14:04" },
+          { "stop": "Sujaval Pur",  "arrive": "14:07",  "depart": "14:07" },
+          { "stop": "Tajpur",       "arrive": "14:21",  "depart": "14:21" },
+          { "stop": "Musri Gharari","arrive": "14:34",  "depart": "14:34" },
+          { "stop": "Samastipur",   "arrive": "15:30",  "depart": null    }
+        ]
+      },
+      {
+        "tripNo": 5,
+        "direction": "Samastipur→Muzaffarpur",
+        "stops": [
+          { "stop": "Samastipur",   "arrive": null,     "depart": "16:05" },
+          { "stop": "Musri Gharari","arrive": "16:25",  "depart": "16:28" },
+          { "stop": "Tajpur",       "arrive": "16:46",  "depart": "16:48" },
+          { "stop": "Sujaval Pur",  "arrive": "17:15",  "depart": "17:17" },
+          { "stop": "Sabha",        "arrive": "17:20",  "depart": "17:22" },
+          { "stop": "Siho",         "arrive": "17:30",  "depart": "17:32" },
+          { "stop": "Markan",       "arrive": "17:37",  "depart": "17:39" },
+          { "stop": "Maniyari",     "arrive": "17:47",  "depart": "17:48" },
+          { "stop": "Kaji Inda",    "arrive": "17:56",  "depart": "17:57" },
+          { "stop": "Dighra",       "arrive": "18:03",  "depart": "18:03" },
+          { "stop": "Kacchi Pakki", "arrive": "18:08",  "depart": "18:08" },
+          { "stop": "Gobarsahi",    "arrive": "18:13",  "depart": "18:13" },
+          { "stop": "Bhagwanpur",   "arrive": "18:16",  "depart": "18:16" },
+          { "stop": "Muzaffarpur",  "arrive": "18:30",  "depart": null    }
+        ]
+      },
+      {
+        "tripNo": 6,
+        "direction": "Muzaffarpur→Samastipur",
+        "stops": [
+          { "stop": "Muzaffarpur",  "arrive": "18:30",  "depart": "18:45" },
+          { "stop": "Bhagwanpur",   "arrive": "18:52",  "depart": "18:53" },
+          { "stop": "Gobarsahi",    "arrive": "18:56",  "depart": "18:57" },
+          { "stop": "Kacchi Pakki", "arrive": "19:00",  "depart": "19:00" },
+          { "stop": "Dighra",       "arrive": "19:06",  "depart": "19:06" },
+          { "stop": "Kaji Inda",    "arrive": "19:12",  "depart": "19:12" },
+          { "stop": "Maniyari",     "arrive": "19:20",  "depart": "19:20" },
+          { "stop": "Markan",       "arrive": "19:23",  "depart": "19:23" },
+          { "stop": "Siho",         "arrive": "19:28",  "depart": "19:28" },
+          { "stop": "Sabha",        "arrive": "19:35",  "depart": "19:35" },
+          { "stop": "Sujaval Pur",  "arrive": "19:38",  "depart": "19:38" },
+          { "stop": "Tajpur",       "arrive": "19:52",  "depart": "19:52" },
+          { "stop": "Musri Gharari","arrive": "20:05",  "depart": "20:05" },
+          { "stop": "Samastipur",   "arrive": "21:00",  "depart": null    }
+        ]
+      }
+    ]
+  }
+}
