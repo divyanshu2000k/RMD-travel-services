@@ -82,6 +82,14 @@ h1, h2,
 ::-webkit-scrollbar-track { background: var(--white); }
 ::-webkit-scrollbar-thumb { background: var(--blue); }
 
+.gallery-img {
+  /* ... keep whatever styles you already have here ... */
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ── Visible focus everywhere ───────────────────────────────── */
 a:focus-visible,
 button:focus-visible,
