@@ -564,16 +564,16 @@ document.addEventListener('DOMContentLoaded', () => {
          On desktop, scroll parallax overrides the transform;
          on mobile the Ken Burns animation plays freely.
   ══════════════════════════════════════════════════════════ */
-  injectStyle([
-    '@keyframes rmdKenBurns{',
-    '  0%  {transform:scale(1)    translateY(0)}',
-    '  100%{transform:scale(1.08) translateY(-12px)}',
-    '}',
-    '.hero-img{',
-    '  animation:rmdKenBurns 18s ease-in-out alternate infinite;',
-    '  will-change:transform;',
-    '}'
-  ].join(''), 'rmd-kenburns');
+  // injectStyle([
+  //   '@keyframes rmdKenBurns{',
+  //   '  0%  {transform:scale(1)    translateY(0)}',
+  //   '  100%{transform:scale(1.08) translateY(-12px)}',
+  //   '}',
+  //   '.hero-img{',
+  //   '  animation:rmdKenBurns 18s ease-in-out alternate infinite;',
+  //   '  will-change:transform;',
+  //   '}'
+  // ].join(''), 'rmd-kenburns');
 
   /* ══════════════════════════════════════════════════════════
      12. SHAKE KEYFRAME (search validation error)
